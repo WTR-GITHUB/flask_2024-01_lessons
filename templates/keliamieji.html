@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block content %}
+<h3>This is the list of leap year between {{start}} and {{end}}</h3>
+{%for metai in keliamieji%}
+{{metai}}
+{% endfor %}
+
+{% endblock %}
