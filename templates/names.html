@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sarašas</title>
+</head>
+<body>
+<h1>Žmonių sarašas: </h1>
+{%for vardas in sarasas%}
+<p><a href = "/{{vardas}}">{{vardas}}</a></p>
+{% endfor %}
+</body>
+</html>
