@@ -2,7 +2,7 @@ from db_main import db, Message, app
 from flask import request, render_template
 
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"]) # type: ignore
 def login():
     if request.method == "POST":
         name = request.form["name"]

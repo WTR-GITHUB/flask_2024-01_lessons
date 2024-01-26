@@ -1,11 +1,52 @@
 {% extends "index.html" %}
 {% block content %}
-{% for user in all %}
-<p>{{ user.name }}<br>{{ user.email }}<br>{{ user.message }}</p>
-{% endfor %}
+<h2>All users</h2>
+
+<table>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table Example</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 50px;
+            }
+
+            th,
+            td {
+                border: 1px solid #1e11d9;
+                padding: 8px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #a76464;
+            }
+        </style>
+    </head>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    {% for user in all %}
+    <tbody>
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.message }}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
 
 <form action="#" method="post">
-    <p>El. paštas:</p>
+    <p>Enter users email to dellete:</p>
     <p><input type="text" name="email" /></p>
     <p><input type="submit" value="submit" /></p>
 </form>
